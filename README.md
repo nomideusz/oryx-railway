@@ -41,7 +41,7 @@ It's one service, a Railway volume, and a TCP proxy for RTMP.
 
 **Bandwidth costs.** Railway bills outbound traffic per GB. A 6 Mbps stream is about 2.7 GB per hour for each restream target or viewer. A 24/7 virtual live stream to one platform comes to roughly 2 TB a month. Lower the bitrate (or use Scenarios → Transcoding) if that matters to you. Inbound traffic from OBS is free.
 
-**Memory.** Oryx idles at about 25 MB. Each restream, virtual live or transcode task runs its own FFmpeg process, and transcoding also uses a lot of CPU.
+**Memory.** Oryx idles at about 30 MB. Each restream, virtual live or transcode task runs its own FFmpeg process, and transcoding also uses a lot of CPU.
 
 **Limits on Railway.** Railway's TCP proxy carries TCP only, so WebRTC (WHIP/WHEP) and SRT, which use UDP, won't work here. RTMP in plus HLS/FLV out cover OBS and every major platform. The console's HTTPS/Let's Encrypt setting isn't needed: Railway already serves your domain over HTTPS.
 
