@@ -1,0 +1,56 @@
+{
+  "services": {
+    "812cdab5-0719-48aa-bc23-f437064c751c": {
+      "icon": "https://raw.githubusercontent.com/nomideusz/oryx-railway/main/icon.png",
+      "name": "Oryx",
+      "build": {
+        "dockerfilePath": "Dockerfile"
+      },
+      "deploy": {
+        "startCommand": null,
+        "healthcheckPath": "/terraform/v1/host/versions",
+        "restartPolicyType": "ON_FAILURE",
+        "restartPolicyMaxRetries": 10
+      },
+      "source": {
+        "repo": "https://github.com/nomideusz/oryx-railway",
+        "rootDirectory": "/"
+      },
+      "variables": {
+        "MGMT_PASSWORD": {
+          "defaultValue": "${{secret(20)}}",
+          "isOptional": false,
+          "description": "Password for the Oryx console - to change it, edit this variable and redeploy"
+        },
+        "REACT_APP_LOCALE": {
+          "defaultValue": "en",
+          "isOptional": false,
+          "description": "Console language: en or zh"
+        },
+        "PORT": {
+          "defaultValue": "2022",
+          "isOptional": false,
+          "description": "Port of the Oryx console and HLS/FLV playback behind the Railway domain - leave as is"
+        },
+        "RAILWAY_DEPLOYMENT_DRAINING_SECONDS": {
+          "defaultValue": "30",
+          "isOptional": false,
+          "description": "Time to save settings cleanly on redeploy"
+        }
+      },
+      "networking": {
+        "serviceDomains": {
+          "<hasDomain>": {}
+        },
+        "tcpProxies": {
+          "1935": {}
+        }
+      },
+      "volumeMounts": {
+        "812cdab5-0719-48aa-bc23-f437064c751c": {
+          "mountPath": "/data"
+        }
+      }
+    }
+  }
+}
