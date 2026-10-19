@@ -1,7 +1,7 @@
 {
   "services": {
     "812cdab5-0719-48aa-bc23-f437064c751c": {
-      "icon": "https://raw.githubusercontent.com/nomideusz/oryx-railway/main/icon.png",
+      "icon": "https://raw.githubusercontent.com/two-workspaces/oryx/main/icon.png",
       "name": "Oryx",
       "build": {
         "dockerfilePath": "Dockerfile"
@@ -13,7 +13,7 @@
         "restartPolicyMaxRetries": 10
       },
       "source": {
-        "repo": "https://github.com/nomideusz/oryx-railway",
+        "repo": "https://github.com/two-workspaces/oryx",
         "rootDirectory": "/"
       },
       "variables": {

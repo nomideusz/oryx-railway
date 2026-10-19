@@ -3,7 +3,7 @@
   "short_name": "Oryx",
   "description": "Live streaming server: RTMP in, HLS out, restream, 24/7 virtual live, DVR",
   "category": "Other",
-  "image": "https://raw.githubusercontent.com/nomideusz/oryx-railway/main/icon.png",
+  "image": "https://raw.githubusercontent.com/two-workspaces/oryx/main/icon.png",
   "card_desc": "Oryx by the SRS team: stream from OBS over RTMP, play back as HLS/FLV, restream to YouTube, Twitch and others at once, loop videos as a 24/7 virtual live stream, and record to MP4.",
   "id": "7e4dccbb-e0d0-4c28-bb85-f28cd5c5b2e0",
   "published": true

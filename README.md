@@ -27,7 +27,7 @@ It's one service, a Railway volume, and a TCP proxy for RTMP.
 
 - [Oryx on GitHub](https://github.com/ossrs/oryx)
 - [Oryx documentation](https://ossrs.io/lts/en-us/docs/v6/doc/getting-started-oryx)
-- [Template source on GitHub](https://github.com/nomideusz/oryx-railway)
+- [Template source on GitHub](https://github.com/two-workspaces/oryx)
 
 ### Implementation Details
 
